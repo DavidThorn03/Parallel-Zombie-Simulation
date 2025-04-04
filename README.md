@@ -1,10 +1,14 @@
-This is a project made in C to simulate the outbreak of at Zombie infection
+# Parallel-Zombie-Simulation
 
-It utilises the pthread library run the program using several threads
+This project was completed for the Parallel Computing module
 
-The simulation is done using a celular atomata model to model a "world" in which, different types of cells interact with eachother throughout the program execution
+This involved creating a cellular automata model to simulate the outbreak of a zombie virus. 
 
-The program features advanced thread handling techniques, such as mutexes for critical section handling and barrier to ensure the model runs one day at a time
+It has been developed in C using Pthreads, implementing mutexes, condition variables, and barriers to avoid critical section issues and ensure the program executes correctly.
 
-The project includes 4 versions of the same program, a serial and parallel verison of the basic and latent versions of the zombie infection outbreak described in [When zombies attack!: Mathematical modelling
-of an outbreak of zombie infection](url), using celular atomata to simulate these rules rather then the mathematical modeling described in the paper
+This cellular automata model had rules based on the logic for zombie virus outbreak explained in [When zombies attack!: Mathematical modelling
+of an outbreak of zombie infection](url), with transitions between Susceptible, zombie, and removed, with the addition of an Infected state in the latient infection model. 
+
+The program assesses each cell, changing its state based on previous events and its neighbouring cells, doing this for every cell each day/cycle and logging these changes to external text files. 
+
+This project involved developing the cellular automata model, parallelising it, and discussing the parallelisation process in a presentation, discussing the differences in results between serial and parallel execution.
